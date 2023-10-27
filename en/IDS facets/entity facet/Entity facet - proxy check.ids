@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS Ruleset - proxy check</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>VSK Software</author>
+    </info>
+    <specifications>
+        <specification name="No proxies allowed" ifcVersion="IFC2X3 IFC4" identifier="78e415a7-9536-47d9-9aab-daba58c13fa5" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability/>
+            <requirements>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:pattern value="^((?!IfcBuildingElementProxy).)*$"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
