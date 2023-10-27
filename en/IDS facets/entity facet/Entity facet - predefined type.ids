@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS Ruleset - predefined type</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>VSK Software</author>
+    </info>
+    <specifications>
+        <specification name="Walls type check" ifcVersion="IFC2X3 IFC4" identifier="c034e566-c6a2-4852-aa43-3891b3500be9" description="Walls must have the predefined type STANDARD" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:enumeration value="IfcWall"/>
+                            <xs:enumeration value="IfcWallStandardCase"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:pattern value=".*"/>
+                        </xs:restriction>
+                    </name>
+                    <predefinedType>
+                        <simpleValue>STANDARD</simpleValue>
+                    </predefinedType>
+                </entity>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
