@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS Ruleset - property check</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>VSK Software</author>
+    </info>
+    <specifications>
+        <specification name="Walls - Fire Rating" ifcVersion="IFC2X3 IFC4" identifier="e50a4d5d-ecc7-4729-bd11-adcd16df93ac" description="Each wall must have a valid fire rating." minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:enumeration value="IfcWall"/>
+                            <xs:enumeration value="IfcWallStandardCase"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/HTML/" minOccurs="1" maxOccurs="1" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FireRating</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:enumeration value="F30"/>
+                            <xs:enumeration value="F60"/>
+                            <xs:enumeration value="F90"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="Walls (load bearing) - Fire Rating" ifcVersion="IFC2X3 IFC4" identifier="81027910-f91d-498c-acf5-c996a3515eaa" description="Each wall must have a valid fire rating." minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:enumeration value="IfcWall"/>
+                            <xs:enumeration value="IfcWallStandardCase"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+                <property datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>LoadBearing</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>true</simpleValue>
+                    </value>
+                </property>
+            </applicability>
+            <requirements>
+                <property uri="https://standards.buildingsmart.org/IFC/RELEASE/IFC4/FINAL/HTML/" minOccurs="1" maxOccurs="1" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FireRating</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:enumeration value="F30"/>
+                            <xs:enumeration value="F60"/>
+                            <xs:enumeration value="F90"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

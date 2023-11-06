@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS Ruleset - quantity check</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>VSK Software</author>
+    </info>
+    <specifications>
+        <specification name="Walls - Base quantities" ifcVersion="IFC2X3 IFC4" identifier="e50a4d5d-ecc7-4729-bd11-adcd16df93ac" description="Each wall must have a valid base quantities" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction>
+                            <xs:enumeration value="IfcWall"/>
+                            <xs:enumeration value="IfcWallStandardCase"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="1" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>BaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Height</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
