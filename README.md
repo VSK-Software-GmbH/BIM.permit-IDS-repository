@@ -6,7 +6,9 @@
 In dem Repository finden die Beispielregeln zur Prüfung von BIM-Modellen auf Basis der Information Delivery Specification (IDS).
 
 **Übersicht**
-* [IFC - Vordefinierte Eigenschaften und Mengen (nur Englisch)](https://github.com/VSK-Software-GmbH/BIM.permit-IDS-repository/tree/main/de/buildingSmart%20International%20Psets%20and%20QTOs)
+* Prüfregeln Webinare
+* Prüfregeln Youtube-Tutorials
+* [IFC - Vordefinierte Eigenschaften und Mengen](https://github.com/VSK-Software-GmbH/BIM.permit-IDS-repository/tree/main/de/buildingSmart%20International%20Psets%20and%20QTOs)
 
 
 
