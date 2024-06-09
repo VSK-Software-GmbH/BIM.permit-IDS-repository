@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>Tutorial Attribut-Facette</title>
+        <version>1.0.0</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>André Vonthron</author>
+    </info>
+    <specifications>
+        <specification name="Prüfung der Mindestlänge für den Namen" ifcVersion="IFC2X3 IFC4" identifier="1e2edef1-9c31-42da-baa4-a54bacee9d82" description="">
+            <applicability/>
+            <requirements>
+                <attribute cardinality="required">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minLength value="3"/>
+                        </xs:restriction>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

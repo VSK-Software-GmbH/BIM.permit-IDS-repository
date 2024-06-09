@@ -7,7 +7,7 @@ In dem Repository finden die Beispielregeln zur Prüfung von BIM-Modellen auf Ba
 
 **Übersicht**
 * Prüfregeln Webinare
-* Prüfregeln Youtube-Tutorials
+* [Prüfregeln Youtube-Tutorial](https://github.com/VSK-Software-GmbH/BIM.permit-IDS-repository/tree/main/de/Youtube-Tutorials)
 * [IFC - Vordefinierte Eigenschaften und Mengen](https://github.com/VSK-Software-GmbH/BIM.permit-IDS-repository/tree/main/de/buildingSmart%20International%20Psets%20and%20QTOs)
 
 

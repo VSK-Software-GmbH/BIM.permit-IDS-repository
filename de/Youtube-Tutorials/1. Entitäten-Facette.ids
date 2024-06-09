@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>Tutorial Entitäten-Facette</title>
+        <version>1.0.0</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>André Vonthron</author>
+    </info>
+    <specifications>
+        <specification name="Prüfe erlaubte Elemente" ifcVersion="IFC2X3 IFC4" identifier="542ee1da-dacd-4b86-ba6d-9851f61012b8" description="">
+            <applicability/>
+            <requirements>
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL"/>
+                            <xs:enumeration value="IFCWINDOW"/>
+                            <xs:enumeration value="IFCDOOR"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </requirements>
+        </specification>
+        <specification name="Filterung nach Türen" ifcVersion="IFC2X3 IFC4" identifier="bc5fa43e-7b34-44dd-861d-c42dc8712a45" description="">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCDOOR</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements/>
+        </specification>
+    </specifications>
+</ids>
