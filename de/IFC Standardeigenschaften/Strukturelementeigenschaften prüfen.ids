@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>Strukturelementeigenschaften prüfen</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>André Vonthron</author>
+    </info>
+    <specifications>
+        <specification name="IfcSite" ifcVersion="IFC2X3 IFC4" identifier="f82f638b-fe27-4daa-ac52-78f83686dc94" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcSite</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcIdentifier">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Reference</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>BuildableArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcPositiveRatioMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>SiteCoverageRatio</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcPositiveRatioMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FloorAreaRatio</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcPositiveLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>BuildingHeightLimit</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SiteCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>TotalArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcBuilding" ifcVersion="IFC2X3 IFC4" identifier="f9be633d-25c6-4620-a3fe-a518f3bdbe6b" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcBuilding</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcIdentifier">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Reference</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcIdentifier">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>BuildingID</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>IsPermanentID</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>ConstructionMethod</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FireProtectionClass</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>SprinklerProtection</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>SprinklerProtectionAutomatic</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>OccupancyType</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPlannedArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetPlannedArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcInteger">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NumberOfStoreys</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>YearOfConstruction</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLabel">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>YearOfLastRefurbishment</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLogical">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>isLandmarked</simpleValue>
+                    </name>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcBuildingStorey" ifcVersion="IFC2X3 IFC4" identifier="dd40156c-f423-43f1-8e3f-11b74b691130" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcBuildingStorey</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcIdentifier">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Reference</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>EntranceLevel</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLogical">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>AboveGround</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>SprinklerProtection</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>SprinklerProtectionAutomatic</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcPlanarForceMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>LeadBearingCapacity</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPlannedArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_BuildingStoreyCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetPlannedArea</simpleValue>
+                    </name>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcSpace" ifcVersion="IFC2X3 IFC4" identifier="23b7f61b-bc62-416b-8ee1-69a0c55a5624" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcSpace</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcIdentifier">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Reference</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>IsExternal</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPlannedArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetPlannedArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>PubliclyAccessible</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcBoolean">
+                    <propertySet>
+                        <simpleValue>Pset_SpaceCommon</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>HandiCapAccessible</simpleValue>
+                    </name>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

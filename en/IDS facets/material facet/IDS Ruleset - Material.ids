@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS Ruleset - Material</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>VSK Software</author>
+    </info>
+    <specifications>
+        <specification name="Material Check" ifcVersion="IFC2X3 IFC4" identifier="7089ef60-4401-4f68-80c4-7c0956b3675e" description="Every Object must have a material" minOccurs="0" maxOccurs="unbounded">
+            <applicability/>
+            <requirements>
+                <material minOccurs="1" maxOccurs="unbounded"/>
+            </requirements>
+        </specification>
+        <specification name="Material Filter" ifcVersion="IFC2X3 IFC4" identifier="9aca406d-b87a-4a02-82c3-885f0a46481a" description="Check all objects made of concrete" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <material>
+                    <value>
+                        <simpleValue>Stahlbeton</simpleValue>
+                    </value>
+                </material>
+            </applicability>
+            <requirements/>
+        </specification>
+    </specifications>
+</ids>

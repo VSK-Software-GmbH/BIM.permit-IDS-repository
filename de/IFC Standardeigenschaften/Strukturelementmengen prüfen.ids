@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>Strukturelementmengen prüfen</title>
+        <version>0.9.6</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>André Vonthron</author>
+    </info>
+    <specifications>
+        <specification name="IfcSite" ifcVersion="IFC2X3 IFC4" identifier="01b072db-77d9-40a5-9431-7efaf626fed9" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcSite</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLenthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SiteBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPerimeter</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLenthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SiteBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossArea</simpleValue>
+                    </name>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcBuilding" ifcVersion="IFC2X3 IFC4" identifier="f9be633d-25c6-4620-a3fe-a518f3bdbe6b" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcBuilding</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Height</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>EavesHeight</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FootprintArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossFloorArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetFloorArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossVolume</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetVolume</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcBuildingStorey" ifcVersion="IFC2X3 IFC4" identifier="dd40156c-f423-43f1-8e3f-11b74b691130" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcBuildingStorey</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossHeight</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetHeigtht</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPerimeter</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossFloorArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetFloorArea</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossVolume</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_BuildingStoreyBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetVolume</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minExclusive xsi:type="xs:numFacet" value="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="IfcSpace" ifcVersion="IFC2X3 IFC4" identifier="23b7f61b-bc62-416b-8ee1-69a0c55a5624" description="" minOccurs="0" maxOccurs="unbounded">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IfcSpace</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>Height</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FinishCeilingHeight</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>FinishFloorHeight</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossPerimeter</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcLengthMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetPerimeter</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossFloorArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetFloorArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossWallArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetWallArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossCeilingArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcAreaMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetCeilingArea</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>GrossVolume</simpleValue>
+                    </name>
+                </property>
+                <property minOccurs="1" maxOccurs="unbounded" datatype="IfcVolumeMeasure">
+                    <propertySet>
+                        <simpleValue>Qto_SpaceBaseQuantities</simpleValue>
+                    </propertySet>
+                    <name>
+                        <simpleValue>NetVolume</simpleValue>
+                    </name>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
