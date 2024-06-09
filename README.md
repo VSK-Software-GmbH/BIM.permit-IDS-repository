@@ -1,3 +1,10 @@
+** english see below ** 
+
 # IDS-Repository
 
-This repository contains example rules according to the Information Delivery Standard (IDS) by buildingSMART International. IDS rules allow to define information requirements to Building Information Models.
+In dem Repository finden die Beispielregeln zur Prüfung von BIM-Modellen auf Basis der Information Delivery Specification (IDS).
+
+
+** english  version **
+# IDS Repository
+This repository contains example rules according to the Information Delivery Standard (IDS) by buildingSMART International. 
