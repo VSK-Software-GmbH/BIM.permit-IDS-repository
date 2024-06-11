@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <info>
+        <title>IDS-Webinar 05.06.2024</title>
+        <version>1.0.0</version>
+        <description>This export has been created using the BIM.permit software by VSK Software GmbH.</description>
+        <author>André Vonthron</author>
+    </info>
+    <specifications>
+        <specification name="Prüfung der Feuerwiederstandsklasse" ifcVersion="IFC2X3 IFC4" identifier="3d2764cf-bdac-4ff2-8932-2cb648804af3" description="Prüft, ob tragenden Wände eine Feuerwiderstandsklasse mit gültigen Werten zugewiesen haben.">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL"/>
+                            <xs:enumeration value="IFCWALLSTANDARDCASE"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+                <property dataType="IFCBOOLEAN">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <baseName>
+                        <simpleValue>LoadBearing</simpleValue>
+                    </baseName>
+                    <value>
+                        <simpleValue>true</simpleValue>
+                    </value>
+                </property>
+            </applicability>
+            <requirements>
+                <property cardinality="required" dataType="IFCLABEL">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <baseName>
+                        <simpleValue>FireRating</simpleValue>
+                    </baseName>
+                    <value>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="F30"/>
+                            <xs:enumeration value="F60"/>
+                            <xs:enumeration value="F90"/>
+                        </xs:restriction>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+        <specification name="Prüfung des Bauteilnamen" ifcVersion="IFC2X3 IFC4" identifier="f48206c0-61f7-4828-8334-66db2eecd62b" description="Prüft, ob Objekte einen Namen mit Mindestlänge von 3 Zeichen aufweisen.">
+            <applicability/>
+            <requirements>
+                <attribute cardinality="required">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction>
+                            <xs:minLength value="3"/>
+                        </xs:restriction>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+        <specification name="Prüfung der Raumbennenung" ifcVersion="IFC2X3 IFC4" identifier="6c35f0f3-3d45-444d-a62e-8565e0aed515" description="Prüft, ob der Name von Räumen nur aus Zahlen besteht.">
+            <applicability>
+                <entity>
+                    <name>
+                        <simpleValue>IFCSPACE</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute cardinality="required">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                    <value>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]*"/>
+                        </xs:restriction>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+        <specification name="Materialprüfung" ifcVersion="IFC2X3 IFC4" identifier="cba66a28-408b-4e05-9e1c-a78c444c8c7d" description="Prüft ob tragende Wände Stahlbeton enthalten.">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL"/>
+                            <xs:enumeration value="IFCWALLSTANDARDCASE"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+                <property dataType="IFCBOOLEAN">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <baseName>
+                        <simpleValue>LoadBearing</simpleValue>
+                    </baseName>
+                    <value>
+                        <simpleValue>true</simpleValue>
+                    </value>
+                </property>
+            </applicability>
+            <requirements>
+                <material cardinality="required">
+                    <value>
+                        <simpleValue>Stahlbeton</simpleValue>
+                    </value>
+                </material>
+            </requirements>
+        </specification>
+        <specification name="Klassifikationsprüfung" ifcVersion="IFC2X3 IFC4" identifier="eadec52b-1bbd-488b-8ef7-63ec38784783" description="Prüft, ob Außenwände nach Uniformat-Klassifikation mit &quot;B201&quot; beginnen.">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL"/>
+                            <xs:enumeration value="IFCWALLSTANDARDCASE"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+                <property dataType="IFCBOOLEAN">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <baseName>
+                        <simpleValue>IsExternal</simpleValue>
+                    </baseName>
+                    <value>
+                        <simpleValue>true</simpleValue>
+                    </value>
+                </property>
+            </applicability>
+            <requirements>
+                <classification cardinality="required">
+                    <value>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="B201.*"/>
+                        </xs:restriction>
+                    </value>
+                    <system>
+                        <simpleValue>Uniformat</simpleValue>
+                    </system>
+                </classification>
+            </requirements>
+        </specification>
+        <specification name="Modellstruktur" ifcVersion="IFC2X3 IFC4" identifier="e4137e82-a589-4818-be44-f80668658918" description="Prüfung ob sich bestimmte Bauteil in einem Geschoss oder Raum in der IFC-Struktur befinden.">
+            <applicability>
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL"/>
+                            <xs:enumeration value="IFCDOOR"/>
+                            <xs:enumeration value="IFCWINDOW"/>
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <partOf cardinality="required" relation="IFCRELCONTAINEDINSPATIALSTRUCTURE">
+                    <entity>
+                        <name>
+                            <xs:restriction base="xs:string">
+<xs:enumeration value="IFCBUILDINGSTOREY"/>
+<xs:enumeration value="IFCSPACE"/>
+                            </xs:restriction>
+                        </name>
+                    </entity>
+                </partOf>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>
